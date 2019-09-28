@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YQBuzzerDetect"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Closed="Window_Closed" Loaded="Window_Loaded">
     <Grid>
-        
+        <Button Name="btnGetDBValue" Command="{Binding Path=GetDBValueCmd}" Content="获取分贝" HorizontalAlignment="Left" Margin="60,50,0,0" VerticalAlignment="Top" Width="75" />
+        <TextBox Name="txtTermId" HorizontalAlignment="Left" Height="23" Margin="151,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="左声道：" HorizontalAlignment="Left" Margin="89,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDBValL"  HorizontalAlignment="Left" Height="23" Margin="151,90,0,0" TextWrapping="Wrap" Text="{Binding Path=DBValL}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="右声道：" HorizontalAlignment="Left" Margin="89,125,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDBValR" HorizontalAlignment="Left" Height="23" Margin="151,125,0,0" TextWrapping="Wrap" Text="{Binding Path=DBValR}" VerticalAlignment="Top" Width="120"/>
+        <RichTextBox x:Name="rtxtMsg" HorizontalAlignment="Left" Height="396" Margin="361,13,0,0" VerticalAlignment="Top" Width="421">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label Content="状态：" HorizontalAlignment="Left" Margin="101,169,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtStatus" TextAlignment="Center" Text="{Binding Path=CurrStatus}" HorizontalAlignment="Left" Height="23" Margin="151,171,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>

@@ -1,0 +1,4 @@
+// 分析网络拾音器当前 DB 值
+int WINAPI TSDK_Req_DbAnalyze(DWORD dwTermID, BOOL bEnable); // 分析第一声道 DB 值
+
+tcp端口 29851
